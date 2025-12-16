@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+// import 'theme1.dart';
+// import 'theme2.dart';
+// import 'theme3.dart';
+import 'media_query.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,33 +14,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
+      ),
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      // ),
       home: Scaffold(
         appBar: AppBar(title: Text("My App")),
-        body: MyInherit(child: MyHome()),
+
+        // body: MyTheme(child: Home()),
+        body: Home(),
       ),
-    );
-  }
-}
-
-class MyInherit extends InheritedWidget {
-  const MyInherit({super.key, required super.child, this.color = Colors.red});
-
-  final Color color;
-
-  @override
-  bool updateShouldNotify(MyInherit oldWidget) => true;
-}
-
-class MyHome extends StatelessWidget {
-  const MyHome({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color:
-          context.dependOnInheritedWidgetOfExactType<MyInherit>()?.color ??
-          Colors.amber,
-      child: Text("Hi"),
     );
   }
 }
