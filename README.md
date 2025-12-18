@@ -1,16 +1,5 @@
-# flutter_inherited
+# Flutter Inherited Widget Example
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- This is a simple Flutter application demonstrating the use of InheritedWidget to share data across the widget tree.
+- The example consists of manual implementation of an InheritedWidget.
+- The example shows the use of `Theme.of(context)` to access theme data and `MediaQuery.of(context)` to access media query data.
